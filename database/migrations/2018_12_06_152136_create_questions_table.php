@@ -17,6 +17,11 @@ class CreateQuestionsTable extends Migration
             $table->increments('id');
             $table->string('pregunta',255);
             $table->string('categoria', 255);
+            $table->string('respuesta_correcta', 255);
+            $table->string('respuesta_incorrecta_01', 255);
+            $table->string('respuesta_incorrecta_02', 255);
+            $table->string('respuesta_incorrecta_03', 255);
+            $table->tinyInteger('dificultad');
             $table->timestamps();
         });
     }
