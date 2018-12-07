@@ -1,4 +1,4 @@
-@extends('app')
+  @extends('app')
 
 @section('content')
 <div class="container">
@@ -12,14 +12,14 @@
                         @csrf
 
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+                            <label for="user" class="col-md-4 col-form-label text-md-right">{{ __('User') }}</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
+                                <input id="user" type="text" class="form-control{{ $errors->has('user') ? ' is-invalid' : '' }}" name="user" value="{{ old('user') }}" required autofocus>
 
-                                @if ($errors->has('name'))
+                                @if ($errors->has('user'))
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('name') }}</strong>
+                                        <strong>{{ $errors->first('user') }}</strong>
                                     </span>
                                 @endif
                             </div>
@@ -60,6 +60,37 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                             </div>
                         </div>
+
+
+                        <div class="form-group row">
+                            <label for="fecha_De_Nacimiento" class="col-md-4 col-form-label text-md-right">{{ __('fecha_De_Nacimiento') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="fecha_De_Nacimiento" type="date" class="form-control{{ $errors->has('fecha_De_Nacimiento') ? ' is-invalid' : '' }}" name="fecha_De_Nacimiento" value="{{ old('fecha_De_Nacimiento') }}" required>
+
+                                @if ($errors->has('fecha_De_Nacimiento'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('fecha_De_Nacimiento') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+
+                        <div class="form-group row">
+                            <label for="genero" class="col-md-4 col-form-label text-md-right">{{ __('Genero') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="genero" type="text" class="form-control{{ $errors->has('genero') ? ' is-invalid' : '' }}" name="genero" value="{{ old('genero') }}" required>
+
+                                @if ($errors->has('genero'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('genero') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">

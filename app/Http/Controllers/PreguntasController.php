@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Question;
 
 class PreguntasController extends Controller
 {
@@ -32,10 +33,41 @@ class PreguntasController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        //
-    }
+
+                public function store (Request $request) {
+
+          /*      if (Auth::user() == null) {
+                      return redirect("/register");
+                    }         */
+
+//var_dump($request);exit;
+
+                  $pregunta = new Question();
+
+                  $this->validate($request, [
+                    "pregunta" => "required|string|min:5|max:256",
+                    "respuesta_correcta" => "required|string|min:1|max:256",
+                    "respuesta_incorrecta_01" => "required|string|min:1|max:256",
+                    "respuesta_incorrecta_02" => "required|string|min:1|max:256",
+                    "respuesta_incorrecta_03" => "required|string|min:1|max:256"
+                  ], [
+                    "required" => "El campo :attribute debe ser completado",
+                    "max" => "El campo :attribute tiene un máximo de :max"
+                  ]);
+
+                  $pregunta->pregunta = $request["pregunta"];
+                  $pregunta->categoria = "sin categoria";
+                  $pregunta->respuesta_correcta = $request["respuesta_correcta"];
+                  $pregunta->respuesta_incorrecta_01 = $request["respuesta_incorrecta_01"];
+                  $pregunta->respuesta_incorrecta_02 = $request["respuesta_incorrecta_02"];
+                  $pregunta->respuesta_incorrecta_03 = $request["respuesta_incorrecta_03"];
+                  $pregunta->dificultad = 1 ;
+
+                  $pregunta->save();
+
+                  return redirect("/index");
+                }  //
+
 
     /**
      * Display the specified resource.
