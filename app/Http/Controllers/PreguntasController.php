@@ -46,10 +46,10 @@ class PreguntasController extends Controller
 
                   $this->validate($request, [
                     "pregunta" => "required|string|min:5|max:256",
-                    "respuesta_correcta" => "required|string|min:1|max:256",
-                    "respuesta_incorrecta_01" => "required|string|min:1|max:256",
-                    "respuesta_incorrecta_02" => "required|string|min:1|max:256",
-                    "respuesta_incorrecta_03" => "required|string|min:1|max:256"
+                    "respuestaCorrecta" => "required|string|min:1|max:256",
+                    "respuestaIncorrecta01" => "required|string|min:1|max:256",
+                    "respuestaIncorrecta02" => "required|string|min:1|max:256",
+                    "respuestaIncorrecta03" => "required|string|min:1|max:256"
                   ], [
                     "required" => "El campo :attribute debe ser completado",
                     "max" => "El campo :attribute tiene un máximo de :max"
@@ -57,10 +57,10 @@ class PreguntasController extends Controller
 
                   $pregunta->pregunta = $request["pregunta"];
                   $pregunta->categoria = "sin categoria";
-                  $pregunta->respuesta_correcta = $request["respuesta_correcta"];
-                  $pregunta->respuesta_incorrecta_01 = $request["respuesta_incorrecta_01"];
-                  $pregunta->respuesta_incorrecta_02 = $request["respuesta_incorrecta_02"];
-                  $pregunta->respuesta_incorrecta_03 = $request["respuesta_incorrecta_03"];
+                  $pregunta->respuesta_correcta = $request["respuestaCorrecta"];
+                  $pregunta->respuesta_incorrecta_01 = $request["respuestaIncorrecta01"];
+                  $pregunta->respuesta_incorrecta_02 = $request["respuestaIncorrecta02"];
+                  $pregunta->respuesta_incorrecta_03 = $request["respuestaIncorrecta03"];
                   $pregunta->dificultad = 1 ;
 
                   $pregunta->save();
