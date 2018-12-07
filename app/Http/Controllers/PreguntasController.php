@@ -82,9 +82,28 @@ class PreguntasController extends Controller
 
      public function selectQuestion()
      {
-           //
+           $cantPreg = Question::count();
+           $randomId = rand(1,$cantPreg);
+           $arraypregunta=Question::find($randomId);
+           $idPregunta=$arraypregunta['id'];
+           $pregunta=$arraypregunta['pregunta'];
+           $respuestas[]=$arraypregunta['respuesta_correcta'];
+           $respuestas[]=$arraypregunta['respuesta_incorrecta_01'];
+           $respuestas[]=$arraypregunta['respuesta_incorrecta_02'];
+           $respuestas[]=$arraypregunta['respuesta_incorrecta_03'];
+           shuffle($respuestas);
+           return view('presentarPregunta',compact ('idPregunta','pregunta','respuestas'));
      }
 
+    public function evaluarResultado(Request $request)
+    {
+      $arraypregunta=Question::find($request['idPregunta']);
+      if ($request['opcionElegida']==$arraypregunta['respuesta_correcta']) {
+             $resultado='acierto';
+      }else  $resultado='desacierto';
+      //echo $resultado;exit;
+     return view('presentarResultado',compact ('resultado'));
+    }
 
     public function show($id)
     {

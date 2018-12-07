@@ -11,10 +11,16 @@
 
       @include("header")
 
+
+        
       <div class="centro">
         <div class="container">
           <h1>
-            Poné a prueba tus conocimientos con "CHALLENGE"
+            @if ($resultado==='acierto')
+                CORRECTO!!!
+            @else
+                RESPUESTA EQUIVOCADA...
+            @endif
           </h1>
           <p>
             EL juego que te va a volar la cabeza
