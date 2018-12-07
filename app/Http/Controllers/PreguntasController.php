@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Question;
+use Auth;
+
 
 class PreguntasController extends Controller
 {
@@ -24,7 +26,10 @@ class PreguntasController extends Controller
      */
     public function create()
     {
-        return view('crearPregunta');
+      if (Auth::user() == null) {
+            return redirect("/login");
+          }
+      return view('crearPregunta');
     }
 
     /**
@@ -34,39 +39,37 @@ class PreguntasController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-                public function store (Request $request) {
+        public function store (Request $request) {
 
-          /*      if (Auth::user() == null) {
-                      return redirect("/register");
-                    }         */
+        if (Auth::user() == null) {
+              return redirect("/register");
+            }
 
-//var_dump($request);exit;
+          $pregunta = new Question();
 
-                  $pregunta = new Question();
+          $this->validate($request, [
+            "pregunta" => "required|string|min:5|max:256",
+            "respuestaCorrecta" => "required|string|min:1|max:256",
+            "respuestaIncorrecta01" => "required|string|min:1|max:256",
+            "respuestaIncorrecta02" => "required|string|min:1|max:256",
+            "respuestaIncorrecta03" => "required|string|min:1|max:256"
+          ], [
+            "required" => "El campo :attribute debe ser completado",
+            "max" => "El campo :attribute tiene un máximo de :max"
+          ]);
 
-                  $this->validate($request, [
-                    "pregunta" => "required|string|min:5|max:256",
-                    "respuestaCorrecta" => "required|string|min:1|max:256",
-                    "respuestaIncorrecta01" => "required|string|min:1|max:256",
-                    "respuestaIncorrecta02" => "required|string|min:1|max:256",
-                    "respuestaIncorrecta03" => "required|string|min:1|max:256"
-                  ], [
-                    "required" => "El campo :attribute debe ser completado",
-                    "max" => "El campo :attribute tiene un máximo de :max"
-                  ]);
+          $pregunta->pregunta = $request["pregunta"];
+          $pregunta->categoria = "sin categoria";
+          $pregunta->respuesta_correcta = $request["respuestaCorrecta"];
+          $pregunta->respuesta_incorrecta_01 = $request["respuestaIncorrecta01"];
+          $pregunta->respuesta_incorrecta_02 = $request["respuestaIncorrecta02"];
+          $pregunta->respuesta_incorrecta_03 = $request["respuestaIncorrecta03"];
+          $pregunta->dificultad = 1 ;
 
-                  $pregunta->pregunta = $request["pregunta"];
-                  $pregunta->categoria = "sin categoria";
-                  $pregunta->respuesta_correcta = $request["respuestaCorrecta"];
-                  $pregunta->respuesta_incorrecta_01 = $request["respuestaIncorrecta01"];
-                  $pregunta->respuesta_incorrecta_02 = $request["respuestaIncorrecta02"];
-                  $pregunta->respuesta_incorrecta_03 = $request["respuestaIncorrecta03"];
-                  $pregunta->dificultad = 1 ;
+          $pregunta->save();
 
-                  $pregunta->save();
-
-                  return redirect("/index");
-                }  //
+          return redirect("/index");
+        }  //
 
 
     /**
@@ -75,6 +78,14 @@ class PreguntasController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+
+     public function selectQuestion()
+     {
+           //
+     }
+
+
     public function show($id)
     {
         //

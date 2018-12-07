@@ -19,8 +19,10 @@
           <p>
             EL juego que te va a volar la cabeza
           </p>
-          <a class="btnjugar" href="#">jugar</a>
-        </div>
+          <form class="" action="/responderPregunta" method="post">
+            <a class="btnjugar" href="#">jugar</a>
+          </form>
+          </div>
       </div>
       <!--footer class="mobile">
         <div class="footer-menu">

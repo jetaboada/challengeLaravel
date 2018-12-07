@@ -18,6 +18,7 @@ Route::get('/', function () {
 Route::get('/index', function () {
     return view('index');
 });
+Route::post('/index', 'PreguntasController@xxxxx');
 
 Auth::routes();
 Route::get('/crear-pregunta', 'PreguntasController@create');
