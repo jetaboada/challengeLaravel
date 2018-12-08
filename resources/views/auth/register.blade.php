@@ -1,5 +1,13 @@
-@extends('app')
-
+  @extends('app')
+  @if ($errors->any())
+     <div class="alert alert-danger">
+         <ul>
+             @foreach ($errors->all() as $error)
+                 <li>{{ $error }}</li>
+             @endforeach
+         </ul>
+     </div>
+  @endif
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -12,14 +20,14 @@
                         @csrf
 
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Nombre') }}</label>
+                            <label for="user" class="col-md-4 col-form-label text-md-right">{{ __('User') }}</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
+                                <input id="user" type="text" class="form-control{{ $errors->has('user') ? ' is-invalid' : '' }}" name="user" value="{{ old('user') }}" required autofocus>
 
-                                @if ($errors->has('name'))
+                                @if ($errors->has('user'))
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('name') }}</strong>
+                                        <strong>{{ $errors->first('user') }}</strong>
                                     </span>
                                 @endif
                             </div>
@@ -62,18 +70,33 @@
                         </div>
 
                         <div class="form-group row">
-                        <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Subí tu foto') }}</label>
-                        <form class="registro" action="/register.blade.php" method="post"enctype="multipart/form-data">
-                        <input type="file" name="file" value="">
+                        <label for="avatar" class="col-md-4 col-form-label text-md-right">{{ __('Subí tu foto') }}</label>
+                        <div class="col-md-6">
+                                <input id="avatar" type="file" class="form-control" name="avatar" value="{{ old('avatar') }}" required>
+
+                                @if ($errors->has('avatar'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('avatar') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
                         </div>
 
                         <div class="form-group row">
-                            <label for="fecha_de_Nacimiento" class="col-md-4 col-form-label text-md-right">{{ __('Fecha de Nacimiento') }}</label>
+                            <label for="fecha_De_Nacimiento" class="col-md-4 col-form-label text-md-right">{{ __('fecha de Nacimiento') }}</label>
+
                             <div class="col-md-6">
-                                <input id="date" type="date" class="form-control" name="date" placeholder="Fecha" required>
+                                <input id="fecha_De_Nacimiento" type="date" class="form-control{{ $errors->has('fecha_De_Nacimiento') ? ' is-invalid' : '' }}" name="fecha_De_Nacimiento" value="{{ old('fecha_De_Nacimiento') }}" required>
+
+                                @if ($errors->has('fecha_De_Nacimiento'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('fecha_De_Nacimiento') }}</strong>
+                                    </span>
+                                @endif
                             </div>
                         </div>
-                        <br>
+
+                      <br>
                     <div class="genero1">
 
                         <?php if (isset($_POST["genero"]) && $_POST["genero"] == "masculino") : ?>
@@ -105,7 +128,7 @@
                     </div>
                     <br><br>
 
-
+                      
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
@@ -124,7 +147,7 @@
 
             </div>
             <div class="fin">
-              <h5>¿Ya tenes una cuenta? <strong><a class="fin" href="/login.blade.html">Iniciar sesión</a></strong></h5>
+              <h5>¿Ya tenes una cuenta? <strong><a class="fin" href="/auth/login.blade.php">Iniciar sesión</a></strong></h5>
             </div>
           </div>
             </div>
