@@ -16,8 +16,8 @@
                 <div class="card-header">{{ __('Registrate') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
-                        @csrf
+                    <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
+                       {{ csrf_field() }} 
 
                         <div class="form-group row">
                             <label for="user" class="col-md-4 col-form-label text-md-right">{{ __('User') }}</label>
@@ -83,7 +83,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="fecha_De_Nacimiento" class="col-md-4 col-form-label text-md-right">{{ __('fecha de Nacimiento') }}</label>
+                            <label for="fecha_De_Nacimiento" class="col-md-4 col-form-label text-md-right">{{ __('Fecha de Nacimiento') }}</label>
 
                             <div class="col-md-6">
                                 <input id="fecha_De_Nacimiento" type="date" class="form-control{{ $errors->has('fecha_De_Nacimiento') ? ' is-invalid' : '' }}" name="fecha_De_Nacimiento" value="{{ old('fecha_De_Nacimiento') }}" required>
@@ -147,7 +147,7 @@
 
             </div>
             <div class="fin">
-              <h5>¿Ya tenes una cuenta? <strong><a class="fin" href="/auth/login.blade.php">Iniciar sesión</a></strong></h5>
+              <h5>¿Ya tenes una cuenta? <strong><a class="fin" href="{{ route('login') }}">Iniciar sesión</a></strong></h5>
             </div>
           </div>
             </div>
