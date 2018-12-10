@@ -17,10 +17,10 @@
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
-                       {{ csrf_field() }} 
+                       {{ csrf_field() }}
 
                         <div class="form-group row">
-                            <label for="user" class="col-md-4 col-form-label text-md-right">{{ __('User') }}</label>
+                            <label for="user" class="col-md-4 col-form-label text-md-right">{{ __('Usuario') }}</label>
 
                             <div class="col-md-6">
                                 <input id="user" type="text" class="form-control{{ $errors->has('user') ? ' is-invalid' : '' }}" name="user" value="{{ old('user') }}" required autofocus>
@@ -128,7 +128,7 @@
                     </div>
                     <br><br>
 
-                      
+
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">

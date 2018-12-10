@@ -1,4 +1,12 @@
-{{--dd ("formulario para crear preguntas")--}}
+  {{--dd ("formulario para crear preguntas")--}}
+  <!DOCTYPE html>
+  <html lang="es" dir="ltr">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="/css/formPreguntas.css">
+      <title>CrearPreguntas</title>
+    </head>
 @extends('app')
 @if ($errors->any())
    <div class="alert alert-danger">
@@ -10,6 +18,7 @@
    </div>
 @endif
 @section('content')
+<div class="centro">
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -29,6 +38,19 @@
                                 @if ($errors->has('pregunta'))
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('pregunta') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="Categoria" class="col-md-4 col-form-label text-md-right">{{ __('Categoria') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="Categoria" type="text" class="form-control{{ $errors->has('Categoria') ? ' is-invalid' : '' }}" name="Categoria" value="{{ old('Categoria') }}" required>
+
+                                @if ($errors->has('Categoria'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('Categoria') }}</strong>
                                     </span>
                                 @endif
                             </div>
@@ -84,7 +106,7 @@
                                     {{ __('Crear Pregunta') }}
                                 </button>  --}}
 
-                                <input type="submit" name="" value="Agregar pregunta">
+                                <input class="btncrear" type="submit" name="" value="Agregar pregunta">
 
                             </div>
                         </div>
@@ -94,4 +116,7 @@
         </div>
     </div>
 </div>
+</div>
+
 @endsection
+</html>
