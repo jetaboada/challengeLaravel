@@ -42,7 +42,9 @@
                                 @endif
                             </div>
                         </div>
-                        <div class="form-group row">
+
+
+              {{--          <div class="form-group row">
                             <label for="Categoria" class="col-md-4 col-form-label text-md-right">{{ __('Categoria') }}</label>
 
                             <div class="col-md-6">
@@ -56,6 +58,7 @@
                             </div>
                         </div>
 
+              --}}
                         <div class="form-group row">
                             <label for="respuestaCorrecta" class="col-md-4 col-form-label text-md-right">{{ __('Respuesta Correcta') }}</label>
 
