@@ -12,18 +12,24 @@
       @include("header")
 
 
-        
+
       <div class="centro">
         <div class="container">
+        @isset ($resultado)
           <h1>
-            @if ($resultado==='acierto')
-                CORRECTO!!!
-            @else
-                RESPUESTA EQUIVOCADA...
-            @endif
+              @if ($resultado==='acierto')
+                  CORRECTO!!!
+              @else
+                  RESPUESTA EQUIVOCADA...
+              @endif
           </h1>
+        @endisset
+
           <p>
-            EL juego que te va a volar la cabeza
+            TOTAL RESPUESTAS: {{$totalRespuestas}};
+            TOTAL ACIERTOS: {{$totalAciertos }};
+            PUNTAJE DEL USUARIO: {{ROUND($totalAciertos/$totalRespuestas*100)}} /100;
+
           </p>
           {{--<form class="" action="/presentarPregunta" method="post">--}}
             <a class="btnjugar" href="/presentarPregunta">jugar</a>

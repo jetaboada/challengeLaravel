@@ -21,10 +21,8 @@ Route::get('/index', function () {
 
 Auth::routes();
 
-//Route::get('/', 'HomeController@index');
-
-
 Route::get('/crear-pregunta', 'PreguntasController@create');
 Route::post('/crear-pregunta', 'PreguntasController@store');
 Route::get('/presentarPregunta', 'PreguntasController@selectQuestion');
 Route::post('/presentarResultado', 'PreguntasController@evaluarResultado');
+Route::get('/calcularPuntaje', 'PreguntasController@calcularPuntaje');

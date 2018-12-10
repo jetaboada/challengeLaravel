@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Question;
+use App\Historial;
 use Auth;
 
 
@@ -42,7 +43,7 @@ class PreguntasController extends Controller
         public function store (Request $request) {
 
         if (Auth::user() == null) {
-              return redirect("/register");
+              return redirect("/login");
             }
 
           $pregunta = new Question();
@@ -82,6 +83,11 @@ class PreguntasController extends Controller
 
      public function selectQuestion()
      {
+
+       if (Auth::user() == null) {
+             return redirect("/login");
+           }
+
            $cantPreg = Question::count();
            $randomId = rand(1,$cantPreg);
            $arraypregunta=Question::find($randomId);
@@ -101,9 +107,34 @@ class PreguntasController extends Controller
       if ($request['opcionElegida']==$arraypregunta['respuesta_correcta']) {
              $resultado='acierto';
       }else  $resultado='desacierto';
-      //echo $resultado;exit;
-     return view('presentarResultado',compact ('resultado'));
+
+       $historial = new Historial();
+
+       $historial->pregunta_id = $arraypregunta["id"];
+       $historial->user_id = Auth::id();
+       $historial->resultado = $resultado;
+
+       $historial->save();
+
+       $totalRespuestas=Historial::where('user_id','=',$historial->user_id)->count();
+       $totalAciertos=Historial::where('user_id','=',$historial->user_id)->where('resultado','=','acierto')->count();
+
+
+     return view('presentarResultado',compact ('resultado','totalAciertos','totalRespuestas'));
     }
+
+
+    public function calcularPuntaje()
+    {
+       $user_id = Auth::id();
+
+       $totalRespuestas=Historial::where('user_id','=',$user_id)->count();
+       $totalAciertos=Historial::where('user_id','=',$user_id)->where('resultado','=','acierto')->count();
+
+
+     return view('presentarResultado',compact ('resultado','totalAciertos','totalRespuestas'));
+    }
+
 
     public function show($id)
     {
