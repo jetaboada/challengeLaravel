@@ -1,13 +1,9 @@
   {{--dd ("formulario para crear preguntas")--}}
-  <!DOCTYPE html>
-  <html lang="es" dir="ltr">
-    <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="/css/formPreguntas.css">
-      <title>CrearPreguntas</title>
-    </head>
+
 @extends('app')
+@section('formPreguntascss')
+  <link rel="stylesheet" href="css/formPreguntas.css">  
+@endsection
 @if ($errors->any())
    <div class="alert alert-danger">
        <ul>
@@ -122,4 +118,3 @@
 </div>
 
 @endsection
-</html>

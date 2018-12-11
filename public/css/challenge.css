@@ -301,6 +301,13 @@ h1.title{
   color:blue;
 }
 
+/* TODO: Hacer estilo para presentar pregunta */
+
+
+
+
+/* Media querys
+==================== */
 @media (min-width: 490px) {
   img.menu{
     display: none;

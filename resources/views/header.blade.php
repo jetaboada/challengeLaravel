@@ -13,8 +13,7 @@
         <a href="#">Challenge</a>
 
         @if (Auth::check())
-          <p>Hola {{Auth::user()["name"]}}
-          <p> </p>
+          <a href="#">Hola {{Auth::user()["user"]}} </a>
           <form class="" action="logout" method="post">
             {{csrf_field()}}
               <input type="submit" value="cerrar sesion"/>
