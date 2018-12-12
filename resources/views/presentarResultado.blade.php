@@ -18,7 +18,7 @@
         @isset ($resultado)
           <h1>
               @if ($resultado==='acierto')
-                  CORRECTO!!!
+                  RESPUESTA CORRECTA!!!
               @else
                   RESPUESTA EQUIVOCADA...
               @endif

@@ -23,7 +23,7 @@
     @yield("formPreguntascss")
 </head>
 <body>
-    <div id='app'>
+    <div id='app'class="@yield("fondo")">
         @include('header')
         {{-- <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">

@@ -1,9 +1,8 @@
 @extends('app')
 @section('presentarPregunta')
 
-
+<div class="fondo">
  <h3>{{$pregunta}}</h3>
-
   <form action="/presentarResultado" method="post">
     @csrf
 
@@ -16,8 +15,12 @@
         @endfor
       </ul>
 
-      <a class="btnjugar" href="/">Salir</a>
+      <a class="btnjugar btndejardejugar" href="/">Dejar de Jugar</a>
       {{--}}<input type="submit" name="opcionElegida" value="Salir">--}}
       <input type="hidden" name="idPregunta" value="{{$idPregunta}}">
   </form>
-  @endsection
+  </div>
+@endsection
+@section("fondo")
+   {{$fondo}}
+@endsection
