@@ -21,6 +21,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/challenge.css') }}" rel="stylesheet">
     @yield("formPreguntascss")
+    @yield("logincss")
 </head>
 <body>
     <div id='app'class="@yield("fondo")">

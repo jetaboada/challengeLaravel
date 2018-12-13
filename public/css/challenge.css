@@ -318,6 +318,8 @@ h3 {
 
 }
 
+
+
 .btn-opciones {
   color: #282828;
   background-color: #D3D3D3;
@@ -334,10 +336,8 @@ h3 {
   width: 20%;
   margin: 0 auto;
   margin-bottom: 0.3%;
-
-
-
 }
+
 
 .btndejardejugar {
 
@@ -358,12 +358,7 @@ display: block;
 width: 20%;
 }
 
-/* .fondo {
-height: 100vh;
-background-image: url(../img/Fondopregunta1.jpg);
-background-size: cover;
-background-repeat: no-repeat;
-} */
+
 
 /* / Imagenes Random */
 
@@ -401,6 +396,16 @@ background-image: url(../img/Fondopregunta5.jpg);
 background-size: cover;
 background-repeat: no-repeat;
 }
+
+
+.fondologin1 {
+height: 100vh;
+background-image: url(../img/Fondologin1.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+}
+
+
 
 
 
