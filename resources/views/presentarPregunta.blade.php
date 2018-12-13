@@ -15,9 +15,9 @@
         @endfor
       </ul>
 
-<<<<<<< HEAD
+
 {{--Cambio JT 13/12: TIMER--}}
-    <div class="timer">
+    <div class="timer" style="text-align:center;font-size:300%;color:red;font-weight:bold">
       {{10}}
     </div>
 
@@ -28,13 +28,17 @@
 
   <form action="/presentarResultado" method="post" class="este">
     @csrf
-      <input class="btncrear btn-opciones" type="submit" name="opcionElegida" value="salir">
+
+      <input class="btnjugar btndejardejugar" type="submit" name="opcionElegida" value="Dejar de jugar">
+
+    {{--  <input class="btncrear btn-opciones" type="submit" name="opcionElegida" value="salir">
+      <a class="btnjugar btndejardejugar" href="/">Dejar de Jugar</a>--}}
       <input type="hidden" name="idPregunta" value="{{$idPregunta}}">
   </form>
 
 {{--Cambio JT 13/12: BLOQUE JS:--}}
 
-  <script type="text/javascript">
+<script type="text/javascript">
   // window.addEventListener('DOMContentLoaded')
     window.onload=function(){
       var tiempoRestante=10;
@@ -51,18 +55,15 @@
         }
       }, 1000);
     }
-  </script>
+</script>
 
+      {{--<a class="btnjugar btndejardejugar" href="/">Dejar de Jugar</a>
+      <input type="submit" name="opcionElegida" value="Salir">
+      <input type="hidden" name="idPregunta" value="{{$idPregunta}}">--}}
 
-  @endsection
-=======
-      <a class="btnjugar btndejardejugar" href="/">Dejar de Jugar</a>
-      {{--}}<input type="submit" name="opcionElegida" value="Salir">--}}
-      <input type="hidden" name="idPregunta" value="{{$idPregunta}}">
   </form>
   </div>
 @endsection
 @section("fondo")
    {{$fondo}}
 @endsection
->>>>>>> daeeccc8d4051ae379175a93bed28fdee71338fe
