@@ -1,13 +1,9 @@
   {{--dd ("formulario para crear preguntas")--}}
-  <!DOCTYPE html>
-  <html lang="es" dir="ltr">
-    <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="/css/formPreguntas.css">
-      <title>CrearPreguntas</title>
-    </head>
+
 @extends('app')
+@section('formPreguntascss')
+  <link rel="stylesheet" href="css/formPreguntas.css">
+@endsection
 @if ($errors->any())
    <div class="alert alert-danger">
        <ul>
@@ -18,7 +14,7 @@
    </div>
 @endif
 @section('content')
-<div class="centro">
+<div class="centro nuevaPregunta">
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -59,7 +55,7 @@
                         </div>
 
               --}}
-                        <div class="form-group row">
+                        <div class="form-group row tituloDeCampo">
                             <label for="respuestaCorrecta" class="col-md-4 col-form-label text-md-right">{{ __('Respuesta Correcta') }}</label>
 
                             <div class="col-md-6">
@@ -73,7 +69,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
+                        <div class="form-group row tituloDeCampo">
                             <label for="respuestaIncorrecta01" class="col-md-4 col-form-label text-md-right">{{ __('Respuesta Incorrecta 1') }}</label>
 
                             <div class="col-md-6">
@@ -87,7 +83,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
+                        <div class="form-group row tituloDeCampo">
                             <label for="respuestaIncorrecta02" class="col-md-4 col-form-label text-md-right">{{ __('Respuesta Incorrecta 2') }}</label>
 
                             <div class="col-md-6">
@@ -95,7 +91,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
+                        <div class="form-group row tituloDeCampo">
                             <label for="respuestaIncorrecta03" class="col-md-4 col-form-label text-md-right">{{ __('Respuesta Incorrecta 3') }}</label>
 
                             <div class="col-md-6">
@@ -122,4 +118,3 @@
 </div>
 
 @endsection
-</html>

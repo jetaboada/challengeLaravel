@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/css/challenge.css">
+    <link rel="icon" href="img/favicon.ico" type="image/gif">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -20,10 +20,12 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/challenge.css') }}" rel="stylesheet">
+    @yield("formPreguntascss")
+    @yield("logincss")
 </head>
 <body>
-    <div id="app">
-        @include("header")
+    <div id='app'class="@yield("fondo")">
+        @include('header')
         {{-- <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -75,8 +77,9 @@
             </div>
         </nav> --}}
 
-        <main class="py-4">
+        <main>
             @yield('content')
+            @yield('presentarPregunta')
         </main>
     </div>
 </body>
