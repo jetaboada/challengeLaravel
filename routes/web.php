@@ -26,3 +26,4 @@ Route::post('/crear-pregunta', 'PreguntasController@store');
 Route::get('/presentarPregunta', 'PreguntasController@selectQuestion');
 Route::post('/presentarResultado', 'PreguntasController@evaluarResultado');
 Route::get('/calcularPuntaje', 'PreguntasController@calcularPuntaje');
+
