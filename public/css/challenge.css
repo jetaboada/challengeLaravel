@@ -141,6 +141,9 @@ p {
   top: 85%;
   left: 12%;*/
 }
+
+
+
 footer{
   background-color: black;
   font-size: 0.5em;
@@ -278,7 +281,7 @@ div.genero1{
   cursor: pointer;
   outline: none;
   color: white;
-  background-color: black;
+  background-color: #282828;
   border: none;
   border-radius: 25px;
   }
@@ -302,6 +305,106 @@ h1.title{
 }
 
 /* TODO: Hacer estilo para presentar pregunta */
+
+h3 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #282828;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 3%;
+
+}
+
+
+
+.btn-opciones {
+  color: #282828;
+  background-color: #D3D3D3;
+  font-size: 11px;
+  line-height: 1;
+  border-radius: 500px;
+  padding: 16px 48px 18px;
+  border-width: 0;
+  letter-spacing: 2px;
+  min-width: 160px;
+  text-transform: uppercase;
+  white-space: normal;
+  display: block;
+  width: 20%;
+  margin: 0 auto;
+  margin-bottom: 0.3%;
+}
+
+
+.btndejardejugar {
+
+color: #fff;
+background-color: #3b5998;
+font-size: 14px;
+line-height: 1;
+border-radius: 500px;
+padding: 16px 48px 18px;
+transition-property: background-color,border-color,color,box-shadow,filter;
+transition-duration: .3s;
+border-width: 0;
+letter-spacing: 2px;
+min-width: 160px;
+text-transform: uppercase;
+white-space: normal;
+display: block;
+width: 20%;
+}
+
+
+
+/* / Imagenes Random */
+
+.fondo1 {
+height: 100vh;
+background-image: url(../img/Fondopregunta1.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+}
+
+.fondo2 {
+height: 100vh;
+background-image: url(../img/Fondopregunta2.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+}
+
+.fondo3 {
+height: 100vh;
+background-image: url(../img/Fondopregunta3.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+}
+
+.fondo4 {
+height: 100vh;
+background-image: url(../img/Fondopregunta4.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+}
+
+.fondo5 {
+height: 100vh;
+background-image: url(../img/Fondopregunta5.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+}
+
+
+.fondologin1 {
+height: 100vh;
+background-image: url(../img/Fondologin1.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+}
+
 
 
 

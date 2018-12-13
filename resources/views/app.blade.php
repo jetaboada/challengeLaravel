@@ -21,9 +21,10 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/challenge.css') }}" rel="stylesheet">
     @yield("formPreguntascss")
+    @yield("logincss")
 </head>
 <body>
-    <div id='app'>
+    <div id='app'class="@yield("fondo")">
         @include('header')
         {{-- <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">

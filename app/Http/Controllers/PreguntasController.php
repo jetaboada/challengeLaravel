@@ -98,7 +98,13 @@ class PreguntasController extends Controller
            $respuestas[]=$arraypregunta['respuesta_incorrecta_02'];
            $respuestas[]=$arraypregunta['respuesta_incorrecta_03'];
            shuffle($respuestas);
-           return view('presentarPregunta',compact ('idPregunta','pregunta','respuestas'));
+           $fondos = ["fondo1", "fondo2", "fondo3", "fondo4"];
+           shuffle($fondos);
+           $fondo = $fondos[0];
+
+           return view('presentarPregunta',compact ('idPregunta','pregunta','respuestas', 'fondo'));
+
+
      }
 
     public function evaluarResultado(Request $request)
@@ -174,4 +180,7 @@ class PreguntasController extends Controller
     {
         //
     }
+
+
+
 }

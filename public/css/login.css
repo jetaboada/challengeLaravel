@@ -1,11 +1,11 @@
 /* Reseteos Generales */
-*{
+*{ */
   box-sizing: border-box;
 }
 
- div.centro{
+div.centroLogin {
   height: 90vh;
-  background-image: url(../img/fondologin.jpg);
+  background-image: url(../img/fondologin2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -13,10 +13,30 @@
   justify-content: space-around;
 }
 
-.btncrear {
+.card-header {
+font-size: 16px;
+text-transform: uppercase;
+color: #34435A;
+font-weight: bold;
+text-align: center;
+}
+
+.card{
+background-color: rgba(255, 255, 255, 0.3);
+
+}
+
+.tituloDeCampo {
+font-weight: bold;
+text-align: right;
+
+}
+
+.btn-primary {
+
   font-size: 12px;
   line-height: 1;
-  background-color: #E17666;
+  background-color: #E8A25D;
   border-radius: 400px;
   padding: 14px 26px 15px;
   text-decoration: none;
@@ -30,27 +50,10 @@
   border: 1px solid transparent;
   margin: 0 auto;
   width: 200px;
-}
-
-
-
-.card{
-background-color: rgba(255, 255, 255, 0.3);
 
 }
 
-
-.card-header {
-font-size: 16px;
-text-transform: uppercase;
-color: #E17666;
-font-weight: bold;
-text-align: center;
-}
-
-
-.tituloDeCampo {
-font-weight: bold;
-text-align: right;
-
+.btn-link {
+  color: black;
+  text-align: left;
 }
