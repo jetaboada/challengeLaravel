@@ -29,6 +29,7 @@ section {
 header {
   background-color: black;
   opacity: 0.8;
+  font-family: Nunito, GandhiSerif-Regular, DINPro, ASAP, sans-serif;
   }
 
 header nav {
@@ -89,6 +90,18 @@ div.centro{
   flex-direction: column;
   justify-content: space-around;
 }
+
+.priv{
+  color: white;
+  background: #000;
+  opacity: 0.6;
+  font-family: Nunito, GandhiSerif-Regular, DINPro, ASAP, sans-serif;
+  height: 100vh;
+  background-image: url(../img/Fondologin.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 h1 {
   text-align: center;
   color: white;
@@ -245,7 +258,7 @@ input[type=text].nacimiento {
     box-sizing: border-box;
     border-radius: 30px;
     color: black;
-    font-family: GandhiSerif-Regular, DINPro, ASAP, sans-serif;
+    font-family: Nunito, GandhiSerif-Regular, DINPro, ASAP, sans-serif;
 }
 
 form.nacimiento{

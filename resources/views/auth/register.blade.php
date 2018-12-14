@@ -139,9 +139,9 @@
                     </form>
                 </div>
             <div>
-                   <p class="fin">Al hacer clic en Registrarse, acepta los <strong><a class="fin" href="#">Términos y Condiciones</a></strong> de Uso de Challenge.
+                   <p class="fin">Al hacer clic en Registrarse, acepta los <strong><a class="fin" href="/terminos">Términos y Condiciones</a></strong> de Uso de Challenge.
                    <br>
-                   Para obtener más información sobre cómo Challenge recopila, utiliza, comparte y protege sus datos personales, <br> lee la <strong><a class="fin" href="#">Política de Privacidad</a></strong> de Challenge.</p>
+                   Para obtener más información sobre cómo Challenge recopila, utiliza, comparte y protege sus datos personales, <br> lee la <strong><a class="fin" href="/privacidad">Política de Privacidad</a></strong> de Challenge.</p>
 
               </form>
 

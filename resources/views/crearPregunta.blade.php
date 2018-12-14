@@ -105,8 +105,10 @@
                                     {{ __('Crear Pregunta') }}
                                 </button>  --}}
 
-                                <input class="btncrear" type="submit" name="" value="Agregar pregunta">
-
+                                <input class="btncrear" type="submit" style="display: block; margin: 0 auto;" name="" value="Agregar pregunta">
+                                <div class="" align='center'>
+                                  <a class="" href="/calcularPuntaje"> <p></p> <p color='white'>Cancelar</p></a>
+                                </div>
                             </div>
                         </div>
                     </form>

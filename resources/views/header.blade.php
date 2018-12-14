@@ -8,9 +8,9 @@
         <img class="menu" src="img/barrita.png" alt="barrita">
       </a>
       <nav class="desktop">
-        <a href="index.php">Home</a>
-        <a href="#">Acerca</a>
-        <a href="#">Challenge</a>
+        <a href="/index">Home</a>
+        <a href="/privacidad">Acerca</a>
+        <a href="/terminos">Challenge</a>
 
         @if (Auth::check())
           <a href="#">Hola {{Auth::user()["user"]}} </a>

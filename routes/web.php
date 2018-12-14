@@ -19,6 +19,14 @@ Route::get('/index', function () {
     return view('index');
 });
 
+Route::get('/privacidad', function (){
+    return view('privacidad');  
+});
+Route::get('/terminos', function (){
+    return view('terminos');  
+});
+
+
 Auth::routes();
 
 Route::get('/crear-pregunta', 'PreguntasController@create');

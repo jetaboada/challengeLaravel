@@ -72,7 +72,7 @@
                         <br>
                         <div class="fin">
                         <br>
-                <p class="fin"> Al quedar registrado y aceptarás los <strong><a class="fin" href="#">Términos y Condiciones</a></strong> y la <strong><a class="fin" href="#">Política de Privacidad de Challenge</a></strong>.
+                <p class="fin"> Al quedar registrado y aceptarás los <strong><a class="fin" href="/terminos">Términos y Condiciones</a></strong> y la <strong><a class="fin" href="/privacidad">Política de Privacidad de Challenge</a></strong>.
                 </p>
               </div>
                     </form>
