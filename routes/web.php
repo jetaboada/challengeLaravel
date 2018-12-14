@@ -19,8 +19,18 @@ Route::get('/index', function () {
     return view('index');
 });
 
+<<<<<<< HEAD
 Route::view('/challenge', 'challenge');
 Route::view('/acerca', 'acerca');
+=======
+Route::get('/privacidad', function (){
+    return view('privacidad');  
+});
+Route::get('/terminos', function (){
+    return view('terminos');  
+});
+
+>>>>>>> fea0aea81360283f1e9cb06764e0c992f6d1c374
 
 Auth::routes();
 
@@ -29,3 +39,4 @@ Route::post('/crear-pregunta', 'PreguntasController@store');
 Route::get('/presentarPregunta', 'PreguntasController@selectQuestion');
 Route::post('/presentarResultado', 'PreguntasController@evaluarResultado');
 Route::get('/calcularPuntaje', 'PreguntasController@calcularPuntaje');
+
