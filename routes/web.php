@@ -19,6 +19,9 @@ Route::get('/index', function () {
     return view('index');
 });
 
+Route::view('/challenge', 'challenge');
+Route::view('/acerca', 'acerca');
+
 Auth::routes();
 
 Route::get('/crear-pregunta', 'PreguntasController@create');

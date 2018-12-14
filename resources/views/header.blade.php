@@ -9,8 +9,8 @@
       </a>
       <nav class="desktop">
         <a href="index.php">Home</a>
-        <a href="#">Acerca</a>
-        <a href="#">Challenge</a>
+        <a href="/acerca">Acerca</a>
+        <a href="/challenge">Challenge</a>
 
         @if (Auth::check())
           <a href="#">Hola {{Auth::user()["user"]}} </a>

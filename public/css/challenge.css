@@ -359,6 +359,34 @@ width: 20%;
 }
 
 
+/* Sección Challenge */
+
+.contenedor{
+  overflow: hidden;
+  height: 90vh;
+  background-image: url(../img/Fondopregunta1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+  .columnastexto {
+    float: left;
+    width: 45%;
+    margin-right: 4.5%;
+    margin-top: 10px;
+  }
+
+.parrafochallenge {
+  color: black;
+}
+
+
+
+
+
+
 
 /* / Imagenes Random */
 
