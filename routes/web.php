@@ -19,10 +19,14 @@ Route::get('/index', function () {
     return view('index');
 });
 
-<<<<<<< HEAD
-Route::view('/challenge', 'challenge');
-Route::view('/acerca', 'acerca');
-=======
+Route::get ('/challenge', function (){ 
+  return view('challenge');
+});
+
+Route::get('/acerca', function (){
+    return view('acerca');  
+});
+
 Route::get('/privacidad', function (){
     return view('privacidad');  
 });
@@ -30,7 +34,6 @@ Route::get('/terminos', function (){
     return view('terminos');  
 });
 
->>>>>>> fea0aea81360283f1e9cb06764e0c992f6d1c374
 
 Auth::routes();
 

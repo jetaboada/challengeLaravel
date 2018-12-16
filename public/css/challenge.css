@@ -93,13 +93,10 @@ div.centro{
 
 .priv{
   color: white;
-  background: #000;
+  background:#D35400;
   opacity: 0.6;
   font-family: Nunito, GandhiSerif-Regular, DINPro, ASAP, sans-serif;
-  height: 100vh;
-  background-image: url(../img/Fondologin.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
+  
 }
 
 h1 {
@@ -393,6 +390,7 @@ width: 20%;
 
 .parrafochallenge {
   color: black;
+  text-align: left;
 }
 
 
