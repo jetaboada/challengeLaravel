@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/challenge.css">
+    <script src="/js/javaScriptChallenge.js"></script>
     <title>Challenge</title>
   </head>
   <body>
@@ -13,30 +14,61 @@
 
 
 
-      <div class="centro">
+      <div class="centroResultado">
         <div class="container">
         @isset ($resultado)
-          <h1>
+          <h1 class="h1Resultado">
               @if ($resultado==='acierto')
-                  RESPUESTA CORRECTA!!!
+                  ¡ CORRECTO !
               @else
                   RESPUESTA EQUIVOCADA...
               @endif
           </h1>
         @endisset
 
-          <p>
-            TOTAL RESPUESTAS: {{$totalRespuestas}};
-            TOTAL ACIERTOS: {{$totalAciertos }};
-            PUNTAJE DEL USUARIO: {{ROUND($totalAciertos/$totalRespuestas*100)}} /100;
+              <div class="muestraResultados">
+                TOTAL RESPUESTAS
+                <br>
+                {{$totalRespuestas}}
+              </div>
 
-          </p>
+              <div class="muestraResultados">
+                TOTAL ACIERTOS
+                <br>
+                {{$totalAciertos }}
+              </div>
+
+              <div class="muestraResultados">
+                PUNTAJE DEL USUARIO
+                <br>
+                {{ROUND($totalAciertos/$totalRespuestas*100)}} /100
+              </div>
+
+        </div>
+
+
+          <!-- <p class="muestraResultados">
+            TOTAL RESPUESTAS
+            <br>
+            {{$totalRespuestas}}
+            <br>
+            <br>
+            TOTAL ACIERTOS
+            <br>
+            {{$totalAciertos }}
+            <br>
+            <br>
+            PUNTAJE DEL USUARIO
+            <br>
+            {{ROUND($totalAciertos/$totalRespuestas*100)}} /100
+          </p> -->
           {{--<form class="" action="/presentarPregunta" method="post">--}}
-            <a class="btnjugar" href="/presentarPregunta">jugar</a>
+            <a class="btnjugar2 btnCambiante" href="/presentarPregunta">jugar</a>
             {{--input type="submit" name="" value="jugar">--}}
           </form>
+          <br>
           <div class="" align='center'>
-            <a class=""  href="/crear-pregunta"> <p></p> <p color='white'>Crear preguntas</p></a>
+            <a class="btnpregunta btnCambiante"  href="/crear-pregunta"> Crear preguntas</a>
           </div>
           </div>
       </div>

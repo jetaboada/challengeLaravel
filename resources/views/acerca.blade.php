@@ -14,14 +14,14 @@
 
   <div class="contenedor">
     <div class="cuerpo">
-<h1 class="parrafochallenge">Acerca de Challenge</h1>
+<h1 class="parrafochallenge1">Acerca de Challenge</h1>
      <div>
-       
+
 
 
      </div>
 
-    <div id="pie">
+    <div class="pie">
     © 2018 Challenge
     </div>
   </div>
@@ -29,4 +29,3 @@
   </div>
   </body>
 </html>
-
