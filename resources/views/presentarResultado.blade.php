@@ -63,8 +63,10 @@
             {{ROUND($totalAciertos/$totalRespuestas*100)}} /100
           </p> -->
           {{--<form class="" action="/presentarPregunta" method="post">--}}
+          <div class="" align='center'>
             <a class="btnjugar2 btnCambiante" href="/presentarPregunta">jugar</a>
             {{--input type="submit" name="" value="jugar">--}}
+          </div>
           </form>
           <br>
           <div class="" align='center'>
