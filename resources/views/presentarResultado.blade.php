@@ -21,7 +21,7 @@
               @if ($resultado==='acierto')
                   ¡ CORRECTO !
               @else
-                  RESPUESTA EQUIVOCADA...
+                  EQUIVOCADO
               @endif
           </h1>
         @endisset

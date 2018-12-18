@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('content')
-  <div class="contenedor">
+  <div class="contenedor1">
     <div class="cuerpo">
       <h1 class="parrafochallenge1">Reglas del Juego</h1>
      <div class="columnastexto">

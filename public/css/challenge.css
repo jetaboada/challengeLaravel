@@ -154,7 +154,6 @@ p {
 
 
 div.centroResultado{
-  height: 90vh;
   background-image: url(../img/fondo_mobile_resultados.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -526,6 +525,17 @@ width: 20%;
   justify-content: space-around;
 }
 
+
+.contenedor1{
+  overflow: hidden;
+  background-image: url(../img/Fondopregunta1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
 .cuerpo {
   background-color: rgba(255, 255, 255, 0.8);
 }
@@ -681,7 +691,6 @@ background-repeat: no-repeat;
   }
 
   div.centroResultado{
-    height: 90vh;
     background-image: url(../img/fondo_desktop_resultados_1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
