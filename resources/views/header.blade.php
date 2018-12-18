@@ -1,9 +1,6 @@
 <header>
   <div class="container">
     <nav>
-      <div class="toggle">
-          <i class="fa fa-bars burger" aria-hidden="true"></i>
-      </div>
       <a href="#">
         <img class="logo" src="img/logo.png" alt="logotipo">
       </a>
