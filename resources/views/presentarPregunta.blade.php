@@ -1,4 +1,4 @@
-@extends('app')
+@extends('app2')
 @section('presentarPregunta')
 
 <div class="fondo">
