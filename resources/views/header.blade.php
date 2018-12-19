@@ -1,7 +1,7 @@
 <header>
   <div class="container">
     <nav>
-      <a href="#">
+      <a href="/index">
         <img class="logo" src="img/logo.png" alt="logotipo">
       </a>
       <a href="#">
